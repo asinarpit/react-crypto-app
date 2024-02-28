@@ -27,12 +27,17 @@ const Navbar = () => {
   const controls = useAnimation();
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
-  const handleResize = () => {
-    setInnerWidth(window.innerWidth);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
 
-  
-  window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if(innerWidth>375){
