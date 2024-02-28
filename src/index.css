@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply snap-y snap-mandatory scroll-smooth overflow-x-hidden;
+    @apply  overflow-x-hidden;
   }
 
   body {
@@ -14,7 +14,7 @@
   }
 
   section {
-    @apply snap-center h-screen;
+    @apply  h-screen;
   }
 
   *{

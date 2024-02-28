@@ -28,7 +28,8 @@ function App() {
       {/* sticky scrolling component */}
       <Faq />
       
-      {/* <Features/> */}
+      
+      <Features/>
       
       <section className="h-full md:h-screen" id="cryptoSpending">
         <CryptoSpending/>

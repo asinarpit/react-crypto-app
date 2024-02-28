@@ -94,18 +94,18 @@ const Features = () => {
     const isInView2 = useInView(ref2, { margin: "-100px" });
     return (
 
-        <div id='features ' className='bg-gradient-to-r from-[#005578] to-[#50b2c0]'>
+        <div id='features ' className='bg-gradient-to-r from-[#005578] to-[#50b2c0] '>
             <section ref={ref1} >
-                <div className='w-full max-w-7xl mx-auto h-full flex items-center p-5 gap-10 justify-between overflow-hidden '>
+                <div className='w-full max-w-7xl mx-auto h-full flex items-center p-5 gap-10 justify-between overflow-hidden'>
 
                     {/* text container */}
                     <motion.div variants={variants} initial="hidden" animate={isInView1 ? "visible" : "hidden"} className='text-white flex flex-col gap-5 w-full max-w-[50%]'>
-                        <motion.h1 className='text-5xl'>Zypto Pay Features</motion.h1>
-                        <motion.ul variants={variants} className='list-disc '>
+                        <motion.h1 className='text-3xl md:text-5xl'>Zypto Pay Features</motion.h1>
+                        <motion.ul variants={variants} className='list-disc'>
 
                             {
                                 features1.map((item, i) => (
-                                    <motion.li variants={itemVariants} className='mb-3 text-lg' key={i}>{item}</motion.li>
+                                    <motion.li variants={itemVariants} className='mb-2 md:mb-3 text-sm md:text-lg' key={i}>{item}</motion.li>
                                 ))
                             }
 
@@ -119,7 +119,7 @@ const Features = () => {
                     </motion.div>
 
                     {/* Logo svg */}
-                    <div className='w-full flex justify-center items-center'>
+                    <div className='w-full justify-center items-center hidden md:flex'>
                         <svg xmlns="http://www.w3.org/2000/svg" width={400} height={400} viewBox="0 0 544 548" >
                             <motion.path
 
@@ -145,16 +145,16 @@ const Features = () => {
             </section>
 
 
-            <section className='overflow-hidden '  >
+            <section className='overflow-hidden h-full md:h-screen'  >
 
                 {/* wrapper */}
-                <div ref={ref2} className='w-full h-full max-w-7xl mx-auto flex justify-between items-center  '>
+                <div ref={ref2} className='w-full h-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center p-5 gap-5 mt-10 '>
                     {/* text container */}
-                    <motion.div variants={variants} initial="hidden" animate={isInView2?"visible":"hidden"} className='max-w-[30%] border border-white rounded-md p-5 '>
-                        <motion.ul variants={variants} className='list-disc text-white list-inside '>
+                    <motion.div variants={variants} initial="hidden" animate={isInView2?"visible":"hidden"} className='md:max-w-[30%] border border-white rounded-md p-5 '>
+                        <motion.ul variants={variants} className='list-disc text-white '>
                         {
                                 features2.map((item, i) => (
-                                    <motion.li variants={itemVariants} className='mb-5  text-lg' key={i}>{item}</motion.li>
+                                    <motion.li variants={itemVariants} className='mb-5  text-sm md:text-lg' key={i}>{item}</motion.li>
                                 ))
                             }
                         </motion.ul>
@@ -162,7 +162,7 @@ const Features = () => {
                     </motion.div>
 
                     {/* card grid container  */}
-                    <motion.div initial="hidden" animate={isInView2 ? "visible" :"hidden"} variants={variants} className='grid grid-cols-2 place-items-center gap-10 '>
+                    <motion.div initial="hidden" animate={isInView2 ? "visible" :"hidden"} variants={variants} className='grid md:grid-cols-2 place-items-center  gap-5 md:gap-10 '>
 
                         {cardData.map((item) => (
                             <motion.div variants={itemVariants}>
