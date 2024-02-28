@@ -70,7 +70,7 @@ const Home = () => {
   }, []);
 
   
-  window.addEventListener('resize', handleResize);
+  
   
   const imgRotate = useTransform(scrollYProgress, [0, 1], ["340deg", "90deg"])
 
