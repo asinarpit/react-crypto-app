@@ -70,7 +70,7 @@ const CryptoSpending = () => {
     const isInView = useInView(ref, { margin: "-100px" });
 
     return (
-        <motion.div ref={ref} className='overflow-hidden relative w-full h-full flex flex-col'>
+        <motion.div ref={ref} className='overflow-hidden relative w-full h-full flex flex-col px-5'>
 
             <motion.div initial="hidden" variants={variants} animate={isInView ? "visible" : "hidden"} className='w-full h-full max-w-7xl mx-auto flex flex-col justify-center items-center  gap-10 p-5 md:p-0 mt-10 md:mt-0 '>
 

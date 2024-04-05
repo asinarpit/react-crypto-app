@@ -56,7 +56,7 @@ const Card = ({ data }) => {
 
 
             {/* heading container */}
-            <div className='absolute h-full w-full top-0 left-0 flex flex-col justify-center items-center text-center'>
+            <div className='absolute h-full w-full top-0 left-0 flex flex-col justify-center items-center text-center bg-[rgba(0,0,0,0.3)]'>
 
                 <h2 className='text-white z-10 text-2xl font-semibold'>{data.title1}</h2>
                 <h4 className='text-white font-semibold'>{data.subtitle}</h4>
@@ -74,7 +74,7 @@ const Card = ({ data }) => {
                     <div className='flex-col gap-2 '>
                         <h3 className='font-semibold text-lg'>{data.title2}</h3>
 
-                        <p className='text-sm'>{data.desc}</p>
+                        <p className='text-xs md:text-sm'>{data.desc}</p>
 
                     </div>
                     <Button text={data.btn} textColor="black" padding="0.6rem" bgColor="#c6ffea" />
@@ -91,5 +91,8 @@ const Card = ({ data }) => {
         </motion.div>
     );
 }
+
+
+
 
 export default Card;

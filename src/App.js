@@ -8,36 +8,36 @@ import Features from "./components/features/Features";
 import Cursor from "./components/cursor/Cursor";
 import CryptoSpending from "./components/crypto-spending/CryptoSpending";
 import Footer from "./components/footer/Footer";
+import LogoSlider from "./components/logo-slider/LogoSlider";
 
 function App() {
   return (
     <div>
-      <Cursor/>
-      <section id="home">
+      <Cursor />
+      <section className="h-screen" id="home">
         <Navbar />
         <Home />
       </section>
-      <section className="h-full md:h-screen" id="intro">
+      <section className="h-full md:h-screen py-20" id="intro">
         <Intro />
       </section>
 
-      <section>
-        <Started />
-      </section>
+      <div className="py-10">
+        <LogoSlider />
+      </div>
+
+      <Started />
 
       {/* sticky scrolling component */}
       <Faq />
-      
-      
-      <Features/>
-      
-      <section className="h-full md:h-screen" id="cryptoSpending">
-        <CryptoSpending/>
+
+      <Features />
+
+      <section className="h-full md:h-screen py-20" id="cryptoSpending">
+        <CryptoSpending />
       </section>
 
-      <section>
-        <Footer/>
-      </section>
+      <Footer />
     </div>
   );
 }

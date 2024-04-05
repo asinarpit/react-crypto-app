@@ -29,7 +29,7 @@ const ProductCard = ({ data }) => {
 
 
     return (
-        <motion.div initial="hidden" whileInView="visible" variants={variants} className='h-[200px] md:h-[300px] w-[350px] md:w-[600px] flex  '>
+        <motion.div initial="hidden" whileInView="visible" variants={variants} className='h-[200px] md:h-[300px] w-full md:w-[600px] flex  '>
             <div className='w-full h-full'>
                 <img className='w-full h-full object-cover' src={data.img} alt="" />
 

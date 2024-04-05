@@ -61,17 +61,17 @@ const Started = () => {
     
     
     return (
-      <div className='w-full h-full'>
-         <div ref={ref} className='w-full max-w-7xl mx-auto h-full flex flex-col justify-center items-center gap-10 text-center p-5'>
-            <motion.div  variants={textVariants}  initial="hidden" animate={isInView ? "visible" : "hidden"} className='text-4xl md:text-9xl flex font-semibold'>
+      <div className='w-full h-full px-5'>
+         <div ref={ref} className='w-full max-w-7xl mx-auto h-full flex flex-col justify-center items-center gap-10 text-center py-20'>
+            <motion.div  variants={textVariants}  initial="hidden" animate={isInView ? "visible" : "hidden"} className='text-4xl md:text-6xl flex font-semibold'>
                 {arr.map((letter,i)=>(
                    <motion.span variants={letterVariants} key={i}>{letter===" " ? "\u00A0" : letter}</motion.span> 
                 ))}
             </motion.div>
 
             <motion.div variants={variants} initial="hidden" animate={isInView ?"visible" :  "hidden"}  className='flex flex-col gap-10'>
-            <motion.p variants={variants}  className='text-xl md:text-3xl text-gray-500'>Sign up for a physical card, purchase a virtual gift card or even pay your bills with any one of nearly 21 thousand US companies.</motion.p>
-            <motion.p variants={variants}  className='text-xl md:text-2xl font-semibold text-[#005578]'>Please read the FAQs before making any payments.</motion.p>
+            <motion.p variants={variants}  className=' font-semibold md:text-2xl text-gray-500'>Sign up for a physical card, purchase a virtual gift card or even pay your bills with any one of nearly 21 thousand US companies.</motion.p>
+            <motion.p variants={variants}  className=' md:text-2xl font-semibold text-[#005578]'>Please read the FAQs before making any payments.</motion.p>
 
             </motion.div>
 

@@ -94,14 +94,14 @@ const Features = () => {
     const isInView2 = useInView(ref2, { margin: "-100px" });
     return (
 
-        <div id='features ' className='bg-gradient-to-r from-[#005578] to-[#50b2c0] '>
-            <section ref={ref1} >
-                <div className='w-full max-w-7xl mx-auto h-full flex items-center p-5 gap-10 justify-between overflow-hidden'>
+        <div id='features ' className='bg-gradient-to-r from-[#005578] to-[#50b2c0] px-5 py-20'>
+            <section ref={ref1} className='h-full md:h-screen' >
+                <div className='w-full max-w-7xl mx-auto h-full flex items-center gap-10 justify-between overflow-hidden'>
 
                     {/* text container */}
-                    <motion.div variants={variants} initial="hidden" animate={isInView1 ? "visible" : "hidden"} className='text-white flex flex-col gap-5 w-full max-w-[50%]'>
+                    <motion.div variants={variants} initial="hidden" animate={isInView1 ? "visible" : "hidden"} className='text-white flex flex-col gap-5 w-full md:max-w-[50%]'>
                         <motion.h1 className='text-3xl md:text-5xl'>Zypto Pay Features</motion.h1>
-                        <motion.ul variants={variants} className='list-disc'>
+                        <motion.ul variants={variants} className='list-disc px-5'>
 
                             {
                                 features1.map((item, i) => (
@@ -148,11 +148,11 @@ const Features = () => {
             <section className='overflow-hidden h-full md:h-screen'  >
 
                 {/* wrapper */}
-                <div ref={ref2} className='w-full h-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center p-5 gap-5 mt-10 '>
+                <div ref={ref2} className='w-full h-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-5 mt-10'>
                     {/* text container */}
-                    <motion.div variants={variants} initial="hidden" animate={isInView2?"visible":"hidden"} className='md:max-w-[30%] border border-white rounded-md p-5 '>
-                        <motion.ul variants={variants} className='list-disc text-white '>
-                        {
+                    <motion.div variants={variants} initial="hidden" animate={isInView2 ? "visible" : "hidden"} className='w-full md:max-w-[30%] border border-white rounded-md p-5'>
+                        <motion.ul variants={variants} className='list-disc px-5 text-white '>
+                            {
                                 features2.map((item, i) => (
                                     <motion.li variants={itemVariants} className='mb-5  text-sm md:text-lg' key={i}>{item}</motion.li>
                                 ))
@@ -162,12 +162,12 @@ const Features = () => {
                     </motion.div>
 
                     {/* card grid container  */}
-                    <motion.div initial="hidden" animate={isInView2 ? "visible" :"hidden"} variants={variants} className='grid md:grid-cols-2 place-items-center  gap-5 md:gap-10 '>
+                    <motion.div initial="hidden" animate={isInView2 ? "visible" : "hidden"} variants={variants} className='grid md:grid-cols-2   gap-5 md:gap-10 '>
 
                         {cardData.map((item) => (
                             <motion.div variants={itemVariants}>
 
-                            <Card data={item} />
+                                <Card data={item} />
                             </motion.div>
                         ))}
 

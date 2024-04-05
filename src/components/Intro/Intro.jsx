@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import LogoSlider from './LogoSlider';
+import LogoSlider from '../logo-slider/LogoSlider';
 import Card from '../card/Card';
 import { motion, useInView } from 'framer-motion';
 const variants = {
@@ -59,12 +59,12 @@ const Intro = () => {
                 {/*text container  */}
 
                 <motion.div variants={variants} className='text-center flex flex-col gap-5'>
-                    <h2 className='text-4xl md:text-7xl font-semibold'>Pay and get paid in crypto</h2>
-                    <p className='font-medium text-gray-600'>Zypto Pay offers a full suite of products for companies that want to accept crypto payments and people that want to spend their cryptocurrency.
+                    <h2 className='text-4xl md:text-6xl font-semibold'>Pay and get paid in crypto</h2>
+                    <p className='font-medium md:text-xl  text-gray-600'>Zypto Pay offers a full suite of products for companies that want to accept crypto payments and people that want to spend their cryptocurrency.
 
                     </p>
 
-                    <p className='text-gray-600 font-medium text-sm md:text-md'>From Q1 2024, download <a href="#" className='text-[#005578] font-bold'>Zypto App… </a>the best way to manage and spend your crypto.</p>
+                    <p className='text-gray-600 font-medium text-sm md:text-lg'>From Q1 2024, download <a href="#" className='text-[#005578] font-bold'>Zypto App… </a>the best way to manage and spend your crypto.</p>
                 </motion.div>
 
                 {/* cards container */}
@@ -77,11 +77,6 @@ const Intro = () => {
             </motion.div>
 
 
-            {/* Logo slider */}
-            <div >
-                <LogoSlider />
-
-            </div>
 
 
 

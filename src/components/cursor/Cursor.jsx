@@ -26,6 +26,7 @@ const Cursor = () => {
     return (
 
         <motion.div className='fixed w-[50px] h-[50px] rounded-full  bg-white z-[999] mix-blend-difference hidden md:flex' animate={{ x: position.x + 10, y: position.y + 10 }}>
+            <img src="/ethereum.svg" alt="" />
 
         </motion.div>
     );

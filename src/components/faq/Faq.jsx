@@ -67,25 +67,24 @@ const Faq = () => {
 
 
     return (
-        <div ref={ref} >
-
-            <motion.div className='sticky top-0 w-full h-screen bg-gradient-to-r from-[#005578] to-[#50b2c0] overflow-hidden'>
+        <div ref={ref}>
+            <motion.div className='snap-center sticky top-0 w-full h-screen bg-gradient-to-r from-[#005578] to-[#50b2c0] overflow-hidden px-5'>
 
 
                 <motion.div className='w-full h-full max-w-7xl m-auto flex  items-center mt-10 md:mt-0'>
 
                     {/* Text container */}
 
-                    <motion.div className='text-white flex flex-col gap-10 md:gap-5  md:max-w-[50%] px-5'>
+                    <motion.div className='text-white flex flex-col gap-10 md:gap-5  md:max-w-[50%]'>
                         <div className='flex flex-col gap-5'>
                             <h1 className='text-3xl md:text-5xl'>Welcome to Zypto Pay</h1>
-                            <p>Purchase prepaid virtual cards, apply for our physical crypto-funded cards, pick from 1000s of gift cards for top brands around the world or even your bills. All available with a wide range of cryptocurrency payment options.</p>
+                            <p className='text-sm'>Purchase prepaid virtual cards, apply for our physical crypto-funded cards, pick from 1000s of gift cards for top brands around the world or even your bills. All available with a wide range of cryptocurrency payment options.</p>
 
                         </div>
 
-                        <div className='flex flex-col h-[200px] md:h-[300px] w-[350px]  md:w-[600px] overflow-hidden'>
+                        <div className='flex flex-col h-[200px] md:h-[300px] w-full md:w-[600px] overflow-hidden'>
                             <motion.div style={{ y }} className='flex flex-col'>
-                                <div className='flex flex-col h-[200px] md:h-[300px] w-[350px] md:w-[600px] p-5 '></div>
+                                <div className='flex flex-col h-[200px] md:h-[300px] w-full md:w-[600px] p-5 '></div>
 
                                 {items.map((item, index) => (
                                     <ProductCard onUpdate={updateActiveIndex}  key={index} data={item} />
@@ -186,12 +185,13 @@ const Faq = () => {
 
 
             </motion.div>
+            
 
             {/* extra sections to preserve scroll styling */}
-            <section id='product1'></section>
-            <section id='product2'></section>
-            <section id='product3'></section>
-            <section id='product4'></section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
         </div>
 
 
